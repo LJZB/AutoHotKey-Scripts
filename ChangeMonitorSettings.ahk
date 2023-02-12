@@ -1,7 +1,7 @@
-;ChangeMonitorSettings v1.0 Beta
+;ChangeMonitorSettings v1.0 
 ;Author: Luis J Zuluaga B
 ;Email: luiszuluaga90@gmail.com
-;v1.0 Beta: Increase and decrease brightness and switch between inputs, all of these with keyboard shortcuts
+;v1.0: Increase and decrease brightness and switch between inputs, all of these with keyboard shortcuts
 ;			This script needs and external software named ControlMyMonitor.exe
 ;			that can be downloaded from https://www.nirsoft.net/utils/control_my_monitor.html
 ;Symbols used in this script:
