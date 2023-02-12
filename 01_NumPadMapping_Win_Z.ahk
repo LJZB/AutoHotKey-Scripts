@@ -43,31 +43,31 @@
 
 ;----------------------- Special Lowercase Letters Part 1 -----------------------
 ; Use AltGr as a modifier.
-<^>!n::send		{U+00F1}				;ñ
-<^>!a::send		{U+00E1}				;á
-<^>!e::send		{U+00E9}				;é
-<^>!i::send		{U+00ED}				;í
-<^>!o::send		{U+00F3}				;ó
-<^>!u::send		{U+00FA}				;ú
+;<^>!n::send		{U+00F1}				;ñ
+;<^>!a::send		{U+00E1}				;á
+;<^>!e::send		{U+00E9}				;é
+;<^>!i::send		{U+00ED}				;í
+;<^>!o::send		{U+00F3}				;ó
+;<^>!u::send		{U+00FA}				;ú
 
 
 ;----------------------- Special Uppercase Letters Part 1 -----------------------
 ; Use RShift as a modifier.
->+n::send		{U+00D1}				;Ñ
->+a::send		{U+00C1}				;Á
->+e::send		{U+00C9}				;É
->+i::send		{U+00CD}				;Í
->+o::send		{U+00D3}				;Ó
->+u::send		{U+00DA}				;Ú
+;>+n::send		{U+00D1}				;Ñ
+;>+a::send		{U+00C1}				;Á
+;>+e::send		{U+00C9}				;É
+;>+i::send		{U+00CD}				;Í
+;>+o::send		{U+00D3}				;Ó
+;>+u::send		{U+00DA}				;Ú
 
 
 ;----------------------- Special Lowercase Letters Part 2 -----------------------
 ; Use RCtrl as a modifier.
->^u::send		{U+00FC}				;ü
+;>^u::send		{U+00FC}				;ü
 
 
 ;----------------------- Special Uppercase Letters Part 2 -----------------------
->^>+u::send		{U+00DC}				;Ü
+;>^>+u::send		{U+00DC}				;Ü
 
 return
 
