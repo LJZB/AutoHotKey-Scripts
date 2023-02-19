@@ -41,7 +41,7 @@
 <!.::send		{NumpadDot}				;.
 
 ;----------------------- Shortcuts For Coding -----------------------
-<!q::send       {LShift+F10}            ;Shortcut to run java proyects
+;<!q::send       {LShift}{F10}            ;Shortcut to run java proyects NOT WORKING
 
 ;----------------------- Special Lowercase Letters Part 1 -----------------------
 ; Use AltGr as a modifier.
