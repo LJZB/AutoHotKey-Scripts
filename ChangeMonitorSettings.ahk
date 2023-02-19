@@ -20,4 +20,4 @@
 <!F9::Run, C:\controlmymonitor\ControlMyMonitor.exe /SetValue "\\.\DISPLAY1\Monitor0" 60 15		
 
 ;Swith to HDMI 1: LeftAlt + F10
-<!F10::Run, C:\controlmymonitor\ControlMyMonitor.exe /SetValue "\\.\DISPLAY1\Monitor0" 60 18		
+<!F10::Run, C:\controlmymonitor\ControlMyMonitor.exe /SetValue "\\.\DISPLAY1\Monitor0" 60 18
