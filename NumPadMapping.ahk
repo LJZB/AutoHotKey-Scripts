@@ -40,6 +40,8 @@
 <!-::send		{NumpadAdd}				;+
 <!.::send		{NumpadDot}				;.
 
+;----------------------- Shortcuts For Coding -----------------------
+<!q::send       {LShift+F10}            ;Shortcut to run java proyects
 
 ;----------------------- Special Lowercase Letters Part 1 -----------------------
 ; Use AltGr as a modifier.
