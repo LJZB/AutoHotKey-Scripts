@@ -40,6 +40,9 @@
 <!-::send		{NumpadAdd}				;+
 <!.::send		{NumpadDot}				;.
 
+;--------------------- Shortcuts For Portuguese ---------------------
+<^>!c::send		{U+00E7}				;AltGr + c = ç
+>+c::send		{U+00C7}				;RShift + c = Ç
 ;----------------------- Shortcuts For Coding -----------------------
 ;<!q::send       {LShift}{F10}            ;Shortcut to run java proyects NOT WORKING
 
