@@ -1,4 +1,4 @@
-; This script enables you to overlay a numpad on your tkl keyboard as shown below.
+; This script enables you to overlay a numpad on your 60% (English layout) keyboard as shown below.
 ; |-----------------------|        |------------------------|
 ; | [7] [8] [9] [0]       |  ----> | [7] [8] [9] [/]        |
 ; |  [u] [i] [o] [p]      |  ----> |  [4] [5] [6] [*]       |
