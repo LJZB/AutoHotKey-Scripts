@@ -10,14 +10,14 @@
 ;| LeftAlt	| <!		|
 
 
-;Increase brightness: LeftAlt + F7
-<!F7::Run, C:\controlmymonitor\ControlMyMonitor.exe /ChangeValue "\\.\DISPLAY1\Monitor0" 10 -10
+;Increase brightness: LeftAlt + Q
+<!Q::Run, C:\controlmymonitor\ControlMyMonitor.exe /ChangeValue "\\.\DISPLAY1\Monitor0" 10 -10
 
-;Decrease brightness: LeftAlt + F8
-<!F8::Run, C:\controlmymonitor\ControlMyMonitor.exe /ChangeValue "\\.\DISPLAY1\Monitor0" 10 10	
+;Decrease brightness: LeftAlt + W
+<!W::Run, C:\controlmymonitor\ControlMyMonitor.exe /ChangeValue "\\.\DISPLAY1\Monitor0" 10 10	
 
 ;Swith to DisplayPort: LeftAlt + F9
-<!F9::Run, C:\controlmymonitor\ControlMyMonitor.exe /SetValue "\\.\DISPLAY1\Monitor0" 60 15		
+<!A::Run, C:\controlmymonitor\ControlMyMonitor.exe /SetValue "\\.\DISPLAY1\Monitor0" 60 15		
 
 ;Swith to HDMI 1: LeftAlt + F10
-<!F10::Run, C:\controlmymonitor\ControlMyMonitor.exe /SetValue "\\.\DISPLAY1\Monitor0" 60 18
+<!S::Run, C:\controlmymonitor\ControlMyMonitor.exe /SetValue "\\.\DISPLAY1\Monitor0" 60 18
