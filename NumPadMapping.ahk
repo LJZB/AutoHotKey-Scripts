@@ -1,10 +1,10 @@
 ; This script enables you to overlay a numpad on your tkl keyboard as shown below.
-; |--------------------|        |--------------------|
-; | [7] [8] [9] [0]    |  ----> | [7] [8] [9] [+]    |
-; |  [u] [i] [o] [p]   |  ----> |  [4] [5] [6] [-]   |
-; |   [j] [k] [l] [;]  |  ----> |   [1] [2] [3] [*]  |
-; |    [m] [,] [.]     |  ----> |    [0] [+] [.] [/] |
-; |--------------------|        |--------------------|
+; |-----------------------|        |------------------------|
+; | [7] [8] [9] [0]       |  ----> | [7] [8] [9] [/]        |
+; |  [u] [i] [o] [p]      |  ----> |  [4] [5] [6] [*]       |
+; |   [j] [k] [l] [;] ['] |  ----> |   [1] [2] [3] [+] [-]  |
+; |    [m] [,] [.]        |  ----> |    [0] [,] [.]         |
+; |-----------------------|        |------------------------|
 
 
 ; For future versions of the script, these are the unicodes for special Spanish characters.
@@ -22,7 +22,7 @@
 ; >^	== RCtrl
 ;------------------------------------ NumPad ------------------------------------
 ; Use LAlt as a modifier. i.e 'LAlt + remapped key' = numpad input
-; Will always use numpad input when the left alt modifier is held down.
+; It will always use numpad input when the left alt modifier is held down.
 <!j::send		{Numpad1}				;1
 <!k::send		{Numpad2}				;2
 <!l::send		{Numpad3}   			;3
@@ -32,17 +32,16 @@
 <!7::send		{Numpad7}   			;7
 <!8::send		{Numpad8}   			;8
 <!9::send		{Numpad9}   			;9
-<!,::send		{Numpad0}   			;0
 <!m::send		{Numpad0}   		 	;0
+<!;::send	    {NumpadAdd}			    ;+
+<!'::send		{NumpadSub}    		    ;-
+<!p::send		{NumpadMult}			;*
 <!0::send		{NumpadDiv}				;/
-<!p::send		{NumpadMult}    		;*
-<!SC027::send	{NumpadSub}				;-
-<!-::send		{NumpadAdd}				;+
-<!.::send		{NumpadDot}				;.
-
+<!.::send		{NumpadDot}				;,
+<!,::send		{,}				        ;,
 ;--------------------- Shortcuts For Portuguese ---------------------
-<^>!c::send		{U+00E7}				;AltGr + c = ç
->+c::send		{U+00C7}				;RShift + c = Ç
+;<!<+c::send		{U+00E7}	            ;AltGr + c = ç
+;>+c::send		    {U+00C7}				;RShift + c = Ç
 ;----------------------- Shortcuts For Coding -----------------------
 ;<!q::send       {LShift}{F10}            ;Shortcut to run java proyects NOT WORKING
 
