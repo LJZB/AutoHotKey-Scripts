@@ -6,7 +6,6 @@
 ; |    [m] [,] [.]        |  ----> |    [0] [,] [.]         |
 ; |-----------------------|        |------------------------|
 
-
 ; For future versions of the script, these are the unicodes for special Spanish characters.
 ; At least three modifier keys are needed for a 60% keyboard with English layout:
 ; One for the Numpad, one for the lowercase letters and one for the uppercase letters.
@@ -39,39 +38,39 @@
 <!0::send		{NumpadDiv}				;/
 <!.::send		{NumpadDot}				;,
 <!,::send		{,}				        ;,
-;--------------------- Shortcuts For Portuguese ---------------------
-;<!<+c::send		{U+00E7}	            ;AltGr + c = ç
-;>+c::send		    {U+00C7}				;RShift + c = Ç
-;----------------------- Shortcuts For Coding -----------------------
-;<!q::send       {LShift}{F10}            ;Shortcut to run java proyects NOT WORKING
+;----------------------------------------------- Shortcuts For Portuguese -----------------------------------------------
+<^<!c::send     {U+00E7}	            ;LCtrl + LAlt + c = ç
+<^<!<+c::send   {U+00C7}				;LCtrl + LAlt + LShift + c = Ç
 
-;----------------------- Special Lowercase Letters Part 1 -----------------------
-; Use AltGr as a modifier.
-;<^>!n::send		{U+00F1}				;ñ
-;<^>!a::send		{U+00E1}				;á
-;<^>!e::send		{U+00E9}				;é
-;<^>!i::send		{U+00ED}				;í
-;<^>!o::send		{U+00F3}				;ó
-;<^>!u::send		{U+00FA}				;ú
+;------------------------------------------- Special Lowercase Letters Part 1 -------------------------------------------
+; Use RAlt as a modifier.
+>!n::send		{U+00F1}				;ñ
+>!a::send		{U+00E1}				;á
+>!e::send		{U+00E9}				;é
+>!i::send		{U+00ED}				;í
+>!o::send		{U+00F3}				;ó
+>!u::send		{U+00FA}				;ú
 
-
-;----------------------- Special Uppercase Letters Part 1 -----------------------
-; Use RShift as a modifier.
-;>+n::send		{U+00D1}				;Ñ
-;>+a::send		{U+00C1}				;Á
-;>+e::send		{U+00C9}				;É
-;>+i::send		{U+00CD}				;Í
-;>+o::send		{U+00D3}				;Ó
-;>+u::send		{U+00DA}				;Ú
+;------------------------------------------- Special Uppercase Letters Part 1 -------------------------------------------
+; Use LShift + RAlt as a modifier.
+>!<+n::send		{U+00D1}				;Ñ
+>!<+a::send		{U+00C1}				;Á
+>!<+e::send		{U+00C9}				;É
+>!<+i::send		{U+00CD}				;Í
+>!<+o::send		{U+00D3}				;Ó
+>!<+u::send		{U+00DA}				;Ú
 
 
-;----------------------- Special Lowercase Letters Part 2 -----------------------
+;------------------------------------------- Special Lowercase Letters Part 2 -------------------------------------------
 ; Use RCtrl as a modifier.
 ;>^u::send		{U+00FC}				;ü
 
 
-;----------------------- Special Uppercase Letters Part 2 -----------------------
+;------------------------------------------- Special Uppercase Letters Part 2 -------------------------------------------
 ;>^>+u::send		{U+00DC}				;Ü
+
+;------------------------------------------------- Shortcuts For Coding -------------------------------------------------
+;<!q::send       {LShift}{F10}            ;Shortcut to run java proyects NOT WORKING
 
 return
 
