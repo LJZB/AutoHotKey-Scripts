@@ -10,10 +10,10 @@
 ;| LeftAlt	| <!		|
 
 
-;Increase brightness: LeftAlt + Q
+;Decrease brightness: LeftAlt + Q
 <!Q::Run, C:\controlmymonitor\ControlMyMonitor.exe /ChangeValue "\\.\DISPLAY1\Monitor0" 10 -10
 
-;Decrease brightness: LeftAlt + W
+;Increase brightness: LeftAlt + W
 <!W::Run, C:\controlmymonitor\ControlMyMonitor.exe /ChangeValue "\\.\DISPLAY1\Monitor0" 10 10	
 
 ;Swith to DisplayPort: LeftAlt + F9
