@@ -1,10 +1,11 @@
 ;Shortcut to emulate keyboard behaviour in Template creation
 <!F12::				;LeftAlt + F12 to activate this function
+    sleep, 500			;Wait for 0.5 seconds, please release any pressed keys.
+    
     Send {TAB}		;Jump to next field
     Send {TAB}		;Jump to next field
     Send {TAB}		;Jump to next field
     
-    sleep, 500			;Wait for 0.5 seconds, please release any pressed keys.
     Send  V1.2			;Version field
 	
 	Send {TAB}		;Jump to next field
