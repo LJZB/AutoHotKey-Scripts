@@ -50,6 +50,7 @@
 >!i::send		{U+00ED}				;í
 >!o::send		{U+00F3}				;ó
 >!u::send		{U+00FA}				;ú
+>!/::send		{U+00BF}				;¿
 
 ;------------------------------------------- Special Uppercase Letters Part 1 -------------------------------------------
 ; Use LShift + RAlt as a modifier.
@@ -73,9 +74,3 @@
 ;<!q::send       {LShift}{F10}            ;Shortcut to run java proyects NOT WORKING
 
 return
-
-
-
-
-
-
