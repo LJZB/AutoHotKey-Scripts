@@ -32,45 +32,13 @@
 <!8::send		{Numpad8}   			;8
 <!9::send		{Numpad9}   			;9
 <!m::send		{Numpad0}   		 	;0
-<!;::send	    {NumpadAdd}			    ;+
-<!'::send		{NumpadSub}    		    ;-
-<!p::send		{NumpadMult}			;*
 <!0::send		{NumpadDiv}				;/
-<!.::send		{NumpadDot}				;,
+<!p::send		{NumpadMult}			;*
+<!SC027::send	{NumpadSub}				;-
+<!-::send	    {NumpadAdd}			    ;+
+<!.::send		{NumpadDot}				;.
 <!,::send		{,}				        ;,
 ;----------------------------------------------- Shortcuts For Portuguese -----------------------------------------------
 <^<!c::send     {U+00E7}	            ;LCtrl + LAlt + c = ç
 <^<!<+c::send   {U+00C7}				;LCtrl + LAlt + LShift + c = Ç
-
-;------------------------------------------- Special Lowercase Letters Part 1 -------------------------------------------
-; Use RAlt as a modifier.
->!n::send		{U+00F1}				;ñ
->!a::send		{U+00E1}				;á
->!e::send		{U+00E9}				;é
->!i::send		{U+00ED}				;í
->!o::send		{U+00F3}				;ó
->!u::send		{U+00FA}				;ú
->!/::send		{U+00BF}				;¿
-
-;------------------------------------------- Special Uppercase Letters Part 1 -------------------------------------------
-; Use LShift + RAlt as a modifier.
->!<+n::send		{U+00D1}				;Ñ
->!<+a::send		{U+00C1}				;Á
->!<+e::send		{U+00C9}				;É
->!<+i::send		{U+00CD}				;Í
->!<+o::send		{U+00D3}				;Ó
->!<+u::send		{U+00DA}				;Ú
-
-
-;------------------------------------------- Special Lowercase Letters Part 2 -------------------------------------------
-; Use RCtrl as a modifier.
-;>^u::send		{U+00FC}				;ü
-
-
-;------------------------------------------- Special Uppercase Letters Part 2 -------------------------------------------
-;>^>+u::send		{U+00DC}				;Ü
-
-;------------------------------------------------- Shortcuts For Coding -------------------------------------------------
-;<!q::send       {LShift}{F10}            ;Shortcut to run java proyects NOT WORKING
-
 return
