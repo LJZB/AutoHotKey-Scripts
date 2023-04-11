@@ -5,6 +5,7 @@
 ;		This script needs and external software named ControlMyMonitor.exe
 ;		that can be downloaded from https://www.nirsoft.net/utils/control_my_monitor.html.
 ;		The commands and the values to execute this script can be obtained by executing ControlMyMonitor.exe manually.
+;v1.1: 	Change LAlt by RShift.
 ;Symbols used in this script:
 ;| Name      	| Symbol 	|
 ;| RightShift	| >+		|
