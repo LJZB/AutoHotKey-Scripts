@@ -1,3 +1,7 @@
+;Sixty_Percent_Keyboard_Mapping
+;Version: v2.1
+;Author: Luis J Zuluaga B
+;Email: luiszuluaga90@gmail.com
 ; This script enables you to overlay a numpad on your 60% (English layout) keyboard as shown below.
 ; |-----------------------|        |------------------------|
 ; | [7] [8] [9] [0]       |  ----> | [7] [8] [9] [/]        |
@@ -5,23 +9,103 @@
 ; |   [j] [k] [l] [;] ['] |  ----> |   [1] [2] [3] [+] [-]  |
 ; |    [m] [,] [.]        |  ----> |    [0] [,] [.]         |
 ; |-----------------------|        |------------------------|
-
-; For future versions of the script, these are the unicodes for special Spanish characters.
-; At least three modifier keys are needed for a 60% keyboard with English layout:
-; One for the Numpad, one for the lowercase letters and one for the uppercase letters.
-
 ; á = U+00E1 | é = U+00E9 | í = U+00ED | ó = U+00F3 | ú = U+00FA | ü = U+00FC | ñ = U+00F1 | ¿ = U+00BF | ¡ = U+00A1
-; Á = U+00C1 | É = U+00C9 | Í = U+00CD | Ó = U+00D3 | Ú = U+00DA | Ü = U+00DC | Ñ = U+00D1
-; <! 	== LAlt
-; >! 	== RAlt
-; >+ 	== RShift
-; <+ 	== LShift
-; <^>! 	== AltGr
-; <^	== LCtrl
-; >^	== RCtrl
-;------------------------------------ NumPad ------------------------------------
+; Á = U+00C1 | É = U+00C9 | Í = U+00CD | Ó = U+00D3 | Ú = U+00DA | Ü = U+00DC | Ñ = U+00D1 |
+; <! 	==   LAlt
+; >! 	==   RAlt
+; >+ 	==   RShift
+; <+ 	==   CapsLock
+; <^	==   LCtrl
+; >^	==   RCtrl
+#NoEnv  ; Recommended for performance and compatibility with future AutoHotkey releases.
+; #Warn  ; Enable warnings to assist with detecting common errors.
+SendMode Input  ; Recommended for new scripts due to its superior speed and reliability.
+SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory.
+
+;---------------------------------------------------------- áÁ ----------------------------------------------------------
+CapsLock & a::
+	if (GetKeyState("CapsLock","t") = 1) {
+        Send {U+00E1} ;á
+	}
+	else{
+		Send {U+00C1} ;Á
+	}
+return
+
+; ---------------------------------------------------------- éÉ ----------------------------------------------------------
+CapsLock & e::
+	if (GetKeyState("CapsLock","t") = 1){
+		Send {U+00E9}
+	}
+	else{
+		Send {U+00C9}
+	}
+return
+
+; ---------------------------------------------------------- íÍ -----------------------------------------------------------
+CapsLock & i::
+	if (GetKeyState("CapsLock","t") = 1){
+		Send {U+00ED}
+	}
+	else
+	{
+		Send {U+00CD}
+	}
+return
+
+; ---------------------------------------------------------- óÓ ----------------------------------------------------------
+CapsLock & o::
+	if (GetKeyState("CapsLock","t") = 1){
+		Send {U+00F3}
+	}
+	else{
+		Send {U+00D3}
+	}
+return
+
+; ---------------------------------------------------------- úÚ ----------------------------------------------------------
+CapsLock & u::
+	if (GetKeyState("CapsLock","t") = 1){
+		Send {U+00FA}
+	}
+	else{
+		Send {U+00DA}
+	}
+return
+
+; ü/Ü
+>!u::
+	if (GetKeyState("CapsLock","t") = 1){
+		Send {U+00FC}
+	}
+	else{
+		Send {U+00DC}
+	}
+return
+
+; ---------------------------------------------------------- ñÑ ----------------------------------------------------------
+CapsLock & n::
+	if (GetKeyState("CapsLock","t") = 1){
+		Send {U+00F1}
+	}
+	else{
+		Send {U+00D1}
+	}
+return
+; ---------------------------------------------------------- ¿ ----------------------------------------------------------
+CapsLock & ?::
+	Send {U+00BF}
+return
+
+; ---------------------------------------------------------- ¡ ----------------------------------------------------------
+CapsLock & !::
+	Send {U+00A1}
+return
+
+
+; ------------------------------------------------------- NumPad -------------------------------------------------------
 ; Use LAlt as a modifier. i.e 'LAlt + remapped key' = numpad input
-; It will always use numpad input when the left alt modifier is held down.
+; It will always use numpad input when the left alt modifier is held down.123456789
 <!j::send		{Numpad1}				;1
 <!k::send		{Numpad2}				;2
 <!l::send		{Numpad3}   			;3
@@ -38,39 +122,3 @@
 <!0::send		{NumpadDiv}				;/
 <!.::send		{NumpadDot}				;,
 <!,::send		{,}				        ;,
-;----------------------------------------------- Shortcuts For Portuguese -----------------------------------------------
-<^<!c::send     {U+00E7}	            ;LCtrl + LAlt + c = ç
-<^<!<+c::send   {U+00C7}				;LCtrl + LAlt + LShift + c = Ç
-
-;------------------------------------------- Special Lowercase Letters Part 1 -------------------------------------------
-; Use RAlt as a modifier.
->!n::send		{U+00F1}				;ñ
->!a::send		{U+00E1}				;á
->!e::send		{U+00E9}				;é
->!i::send		{U+00ED}				;í
->!o::send		{U+00F3}				;ó
->!u::send		{U+00FA}				;ú
->!/::send		{U+00BF}				;¿
-
-;------------------------------------------- Special Uppercase Letters Part 1 -------------------------------------------
-; Use LShift + RAlt as a modifier.
->!<+n::send		{U+00D1}				;Ñ
->!<+a::send		{U+00C1}				;Á
->!<+e::send		{U+00C9}				;É
->!<+i::send		{U+00CD}				;Í
->!<+o::send		{U+00D3}				;Ó
->!<+u::send		{U+00DA}				;Ú
-
-
-;------------------------------------------- Special Lowercase Letters Part 2 -------------------------------------------
-; Use RCtrl as a modifier.
-;>^u::send		{U+00FC}				;ü
-
-
-;------------------------------------------- Special Uppercase Letters Part 2 -------------------------------------------
-;>^>+u::send		{U+00DC}				;Ü
-
-;------------------------------------------------- Shortcuts For Coding -------------------------------------------------
-;<!q::send       {LShift}{F10}            ;Shortcut to run java proyects NOT WORKING
-
-return
