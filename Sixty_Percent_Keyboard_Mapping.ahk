@@ -11,18 +11,18 @@
 ; |-----------------------|        |------------------------|
 ; á = U+00E1 | é = U+00E9 | í = U+00ED | ó = U+00F3 | ú = U+00FA | ü = U+00FC | ñ = U+00F1 | ¿ = U+00BF | ¡ = U+00A1
 ; Á = U+00C1 | É = U+00C9 | Í = U+00CD | Ó = U+00D3 | Ú = U+00DA | Ü = U+00DC | Ñ = U+00D1 |
-; <! 	==   LAlt
-; >! 	==   RAlt
-; >+ 	==   RShift
-; <+ 	==   CapsLock
-; <^	==   LCtrl
-; >^	==   RCtrl
+; <! 	==	LAlt
+; >! 	==	RAlt
+; >+ 	==	RShift
+; <+	==	LShift
+; <^	==	LCtrl
+; >^	==	RCtrl
 #NoEnv  ; Recommended for performance and compatibility with future AutoHotkey releases.
 ; #Warn  ; Enable warnings to assist with detecting common errors.
 SendMode Input  ; Recommended for new scripts due to its superior speed and reliability.
 SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory.
 
-;---------------------------------------------------------- áÁ ----------------------------------------------------------
+;---------------------------------------------------------- á/Á ----------------------------------------------------------
 CapsLock & a::
 	if (GetKeyState("CapsLock","t") = 1) {
         Send {U+00E1} ;á
@@ -32,58 +32,59 @@ CapsLock & a::
 	}
 return
 
-; ---------------------------------------------------------- éÉ ----------------------------------------------------------
+; ---------------------------------------------------------- é/É ----------------------------------------------------------
 CapsLock & e::
 	if (GetKeyState("CapsLock","t") = 1){
-		Send {U+00E9}
+		Send {U+00E9} ;é
 	}
 	else{
-		Send {U+00C9}
+		Send {U+00C9} ;É
 	}
 return
 
-; ---------------------------------------------------------- íÍ -----------------------------------------------------------
+; ---------------------------------------------------------- í/Í -----------------------------------------------------------
 CapsLock & i::
 	if (GetKeyState("CapsLock","t") = 1){
-		Send {U+00ED}
+		Send {U+00ED} ;í
 	}
 	else
 	{
-		Send {U+00CD}
+		Send {U+00CD} ;Í
 	}
 return
 
-; ---------------------------------------------------------- óÓ ----------------------------------------------------------
+; ---------------------------------------------------------- ó/Ó ----------------------------------------------------------
 CapsLock & o::
 	if (GetKeyState("CapsLock","t") = 1){
-		Send {U+00F3}
+		Send {U+00F3} ;ó
 	}
 	else{
-		Send {U+00D3}
+		Send {U+00D3} ;Ó
 	}
 return
 
-; ---------------------------------------------------------- úÚ ----------------------------------------------------------
+; ---------------------------------------------------------- ú/Ú ----------------------------------------------------------
 CapsLock & u::
 	if (GetKeyState("CapsLock","t") = 1){
-		Send {U+00FA}
+		Send {U+00FA} ;ú
 	}
 	else{
-		Send {U+00DA}
+		Send {U+00DA} ;Ú
 	}
 return
 
-; ü/Ü
->!u::
-	if (GetKeyState("CapsLock","t") = 1){
-		Send {U+00FC}
+; ---------------------------------------------------------- ü/Ü ----------------------------------------------------------
+<+u::
+	if (GetKeyState("CapsLock","t") = 0) 
+	{
+		Send {U+00FC} ;
 	}
 	else{
 		Send {U+00DC}
 	}
 return
-
-; ---------------------------------------------------------- ñÑ ----------------------------------------------------------
+; 
+; ---------------------------------------------------------- ñ/Ñ ----------------------------------------------------------
 CapsLock & n::
 	if (GetKeyState("CapsLock","t") = 1){
 		Send {U+00F1}
@@ -102,10 +103,9 @@ CapsLock & !::
 	Send {U+00A1}
 return
 
-
 ; ------------------------------------------------------- NumPad -------------------------------------------------------
 ; Use LAlt as a modifier. i.e 'LAlt + remapped key' = numpad input
-; It will always use numpad input when the left alt modifier is held down.123456789
+; It will always use numpad input when the left alt modifier is held down.
 <!j::send		{Numpad1}				;1
 <!k::send		{Numpad2}				;2
 <!l::send		{Numpad3}   			;3
