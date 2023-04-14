@@ -14,21 +14,40 @@
 ; <^	==	LCtrl
 ; >^	==	RCtrl
 
+RemoveToolTip:
+        ToolTip
+        return
+
 ;Decrease brightness: LeftAlt + Down Arrow
-<!Down::Run, C:\controlmymonitor\ControlMyMonitor.exe /ChangeValue "\\.\DISPLAY2\Monitor0" 10 -10
+<!Down::
+        Run, C:\controlmymonitor\ControlMyMonitor.exe /ChangeValue "\\.\DISPLAY2\Monitor0" 10 -5
+        Run, C:\controlmymonitor\ControlMyMonitor.exe /ChangeValue "\\.\DISPLAY3\Monitor0" 10 -5
+Return
 
 ;Increase brightness: LeftAlt + Up Arrow
-<!Up::Run, C:\controlmymonitor\ControlMyMonitor.exe /ChangeValue "\\.\DISPLAY2\Monitor0" 10 10	
+<!Up:: 
+        Run, C:\controlmymonitor\ControlMyMonitor.exe /ChangeValue "\\.\DISPLAY2\Monitor0" 10 5	
+        Run, C:\controlmymonitor\ControlMyMonitor.exe /ChangeValue "\\.\DISPLAY3\Monitor0" 10 5
+Return
 
 ;Decrease Contrast: LeftAlt + Left Arrow
-<!Left::Run, C:\controlmymonitor\ControlMyMonitor.exe /ChangeValue "\\.\DISPLAY2\Monitor0" 12 -10
+<!Left::
+        Run, C:\controlmymonitor\ControlMyMonitor.exe /ChangeValue "\\.\DISPLAY2\Monitor0" 12 -5
+        Run, C:\controlmymonitor\ControlMyMonitor.exe /ChangeValue "\\.\DISPLAY3\Monitor0" 12 -5
+Return
 
 ;Increase Contrast: LeftAlt + Right Arrow
-<!Right::Run, C:\controlmymonitor\ControlMyMonitor.exe /ChangeValue "\\.\DISPLAY2\Monitor0" 12 10	
+<!Right::
+        Run, C:\controlmymonitor\ControlMyMonitor.exe /ChangeValue "\\.\DISPLAY2\Monitor0" 12 5
+        Run, C:\controlmymonitor\ControlMyMonitor.exe /ChangeValue "\\.\DISPLAY3\Monitor0" 12 5
+Return
 
-;Swith to DisplayPort: LeftAlt + 1
-<!1::Run, C:\controlmymonitor\ControlMyMonitor.exe /SetValue "\\.\DISPLAY2\Monitor0" 60 15		
+;Swith to Laptop: LeftAlt + 1
+<!1::
+        Run, C:\controlmymonitor\ControlMyMonitor.exe /SetValue "\\.\DISPLAY2\Monitor0" 60 17
+        Run, C:\controlmymonitor\ControlMyMonitor.exe /SetValue "\\.\DISPLAY3\Monitor0" 60 18
 
-;Swith to HDMI 1: LeftAlt + 2
-<!2::Run, C:\controlmymonitor\ControlMyMonitor.exe /SetValue "\\.\DISPLAY2\Monitor0" 60 18
-
+;Swith to PC: LeftAlt + 2
+<!2::
+        Run, C:\controlmymonitor\ControlMyMonitor.exe /SetValue "\\.\DISPLAY2\Monitor0" 60 15
+        Run, C:\controlmymonitor\ControlMyMonitor.exe /SetValue "\\.\DISPLAY3\Monitor0" 60 18
