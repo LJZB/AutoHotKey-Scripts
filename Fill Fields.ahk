@@ -78,11 +78,11 @@ return ;End of Function
 	Send {ENTER}	;Choose template
 	Send {TAB}		;Jump to next field
 
-	Send m			;Frequency field
+	Send a			;Frequency field
 	Send {TAB}		;Jump to next field
 
-	Send a			;First Period Due field
-	Send a			;First Period Due field
+	Send s			;First Period Due field
+	;Send a			;First Period Due field
 	Send {TAB}		;Jump to next field
 
 	Send 2			;First Year Due field
