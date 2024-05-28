@@ -13,6 +13,7 @@
 ; It will always use numpad input when the left alt modifier is held down.
 
 Persistent
+MyPath := "C:\Users\VIRTUAL\OneDrive - VIRTUALSOFT SERVICIOS & SOFTWARE S.A.S\Analista QA\Proyectos\Cypress"
 
 virtualSoftPass := IniRead("C:\Users\Luis Zuluaga\pass.ini", "VirtualSoft","key")
 ; luiszuluaga90Pass := IniRead("C:\Users\Luis Zuluaga\pass.ini", "luiszuluaga90","key")
@@ -20,6 +21,10 @@ virtualSoftPass := IniRead("C:\Users\Luis Zuluaga\pass.ini", "VirtualSoft","key"
 <!1::Send		"luis.zuluaga@virtualsoft.tech"				                ;LALT + 1
 <!2::Send       virtualSoftPass                                             ;LALT + 2
 <!3::Send		"luiszuluaga90@gmail.com"				                    ;LALT + 3
+<!F5::Send      "{Media_Prev}"                                              ;LALT + Left
+<!F6::Send      "{Media_Play_Pause}"                                        ;LALT + Space
+<!F7::Send      "{Media_Next}"                                              ;LALT + Right
+<!Delete::Send  "{Volume_Mute}"                                             ;LALT + Delete
 
 <!j::                                                                       ;LALT + j
 {
@@ -28,13 +33,16 @@ virtualSoftPass := IniRead("C:\Users\Luis Zuluaga\pass.ini", "VirtualSoft","key"
 }
 
 ;Este atajo para ejecutar Cypress aún tiene problemas, la aplicación no se ejecuta
-<!c::
-{
-    Run         A_ComSpec
-    Sleep       1000
-    Send        "npx cypress open"
-    Send        "{ENTER}"
-}
+; <!c::
+; {
+;     Run         "powershell.exe"
+;     Sleep       1000
+;     Send        '{Raw}cd "C:\Users\VIRTUAL\OneDrive - VIRTUALSOFT SERVICIOS & SOFTWARE S.A.S\Analista QA\Proyectos\Cypress" '
+;     Send        "{ENTER}"
+;     Sleep       1000
+;     Send        " npx cypress open"
+;     Send        "{ENTER}"
+; }
 
 <!f::
 {
